@@ -22,7 +22,7 @@ logging.basicConfig(level=logging.INFO)
 # Constants
 
 
-
+# Daily commit
 class TableObject(object):
     def __init__(self, is_set=False, set_representation="[Q]", unset_representation = "[ ]"):
         self.set_representation = set_representation if isinstance(set_representation, unicode) else "[Q]"
