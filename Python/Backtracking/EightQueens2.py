@@ -60,6 +60,6 @@ def main():
     queensProblem = QueenProblem(6)
     queensProblem.solve()
 
-
+# 
 if __name__ == "__main__":
     main()
