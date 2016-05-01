@@ -231,8 +231,9 @@ class TestTable(unittest.TestCase):
 
         main_diagonal_3 = self.table.get_main_diagonal(1, 1)
 
-
         self.assertEquals(1, len([table_object for table_object in main_diagonal_3 if table_object.is_set]))
+
+        self.table.reset()
 
     def test_get_second_diagonal(self):
 
@@ -241,10 +242,6 @@ class TestTable(unittest.TestCase):
         [ [1, 0] [1, 1] <1, 2> [1, 3] ]
         [ [2, 0] <2, 1> [2, 2] [2, 3] ]
         [ <3, 0> [3, 1] [3, 2] [3, 3] ]
-
-        Set (0, 0) and (0, 1), (1, 2), (2, 3)
-
-        Main diagonal of (0, 1), (1, 2), (2, 3) should be the same and should not include (0, 0)
 
         :return:
         '''
@@ -268,3 +265,8 @@ class TestTable(unittest.TestCase):
         second_diagonal_4 = self.table.get_second_diagonal(0, 0)
 
         self.assertEquals(1, len([table_object for table_object in second_diagonal_4 if table_object.is_set]))
+
+        self.table.reset()
+
+    def test_is_correct(self):
+        pass
