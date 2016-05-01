@@ -47,12 +47,13 @@ class Table(object):
         # The actual table is a list of lists. In this contexts, a list of rows.
         self.table = []
         self.size = size
+        self.placed_queens = []
 
         for row_number in range(self.size):
             row = []
             for column_number in range(self.size):
                 element = TableObject()
-                element.representation = "[" + unicode(row_number) + " , " + unicode(column_number) + "]"
+                # element.representation = "[" + unicode(row_number) + " , " + unicode(column_number) + "]"
                 row.append(element)
             self.table.append(row)
 
@@ -172,9 +173,28 @@ class Table(object):
             for element in row:
                 element.set(value=False)
 
+    def solve(self):
+        self.arrange(0)
+
+    def arrange(self, column_number):
+        for row_number in range(self.size):
+            if self.check(row_number, column_number):
+                self.set(row_number, column_number)
+                self.placed_queens.append((row_number, column_number))
+                if column_number != self.size - 1:
+                    self.arrange(column_number + 1)
+            else:
+                self.undo(self.placed_queens.pop())
+
+    def undo(self, position):
+        row, column = position
+        self.set(row, column, False)
+
 
 def main():
     table = Table(4)
+    table.solve()
+    print "Table:\n" + unicode(table)
 
 if __name__ == '__main__':
     main()
