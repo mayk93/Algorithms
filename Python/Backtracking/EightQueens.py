@@ -21,7 +21,11 @@ logging.basicConfig(level=logging.INFO)
 
 # Constants
 
+'''
+IMPORTANT!
 
+Refactor Table Object to be self aware of it's position on the table.
+'''
 
 class TableObject(object):
     def __init__(self, is_set=False, set_representation="[Q]", unset_representation = "[ ]"):
@@ -163,35 +167,67 @@ class Table(object):
                         return False
         return True
 
+    def reset(self):
+        for row in self.table:
+            for element in row:
+                element.set(value=False)
+
 
 def main():
     table = Table(4)
-    print unicode(table)
-
-    print unicode([unicode(element) for element in table.get_main_diagonal(0, 2)])
-    print unicode([unicode(element) for element in table.get_second_diagonal(0, 2)])
-
-    print unicode([unicode(element) for element in table.get_main_diagonal(2, 1)])
-    print unicode([unicode(element) for element in table.get_second_diagonal(2, 1)])
-
-    print unicode(table.is_correct())
-
-    table.set(2, 2)
-    table.set(2, 1)
-
-    print unicode(table)
-    print unicode([unicode(element) for element in table.get_main_diagonal(2, 2)])
-    print unicode([unicode(element) for element in table.get_second_diagonal(2, 2)])
-    print unicode([unicode(element) for element in table.get_column(2)])
-    print unicode([unicode(element) for element in table.table[2]])
-
-    print unicode(table.is_correct())
-
-    table.set(2, 1, False)
-
-    print unicode(table)
-    print unicode(table.is_correct())
 
 if __name__ == '__main__':
     main()
 
+import unittest
+
+class TestTable(unittest.TestCase):
+    def setUp(self):
+        self.size = 4
+        self.table = Table(self.size)
+
+    def test_get_column(self):
+        self.table.set(0, 0)
+        self.table.set(2, 0)
+        self.table.set(3, 0)
+
+        column = self.table.get_column(0)
+
+        self.assertEquals(3, len([table_object for table_object in column if table_object.is_set]))
+
+        self.assertTrue(column[0].is_set)
+        self.assertTrue(column[2].is_set)
+        self.assertTrue(column[3].is_set)
+
+        self.table.reset()
+
+    def test_get_main_diagonal(self):
+        '''
+        [ <0, 0> <0, 1> [0, 2] [0, 3] ]
+        [ [1, 0] [1, 1] <1, 2> [1, 3] ]
+        [ [2, 0] [2, 1] [2, 2] <2, 3> ]
+        [ [3, 0] [3, 1] [3, 2] [3, 3] ]
+
+        Set (0, 0) and (0, 1), (1, 2), (2, 3)
+
+        Main diagonal of (0, 1), (1, 2), (2, 3) should be the same and should not include (0, 0)
+
+        :return:
+        '''
+        self.table.set(0, 0)
+        self.table.set(0, 1)
+        self.table.set(1, 2)
+        self.table.set(2, 3)
+
+        main_diagonal_0 = self.table.get_main_diagonal(0, 1)
+        main_diagonal_1 = self.table.get_main_diagonal(1, 2)
+        main_diagonal_2 = self.table.get_main_diagonal(2, 3)
+
+        self.assertEquals(3, len([table_object for table_object in main_diagonal_0 if table_object.is_set]))
+        self.assertEquals(3, len([table_object for table_object in main_diagonal_1 if table_object.is_set]))
+        self.assertEquals(3, len([table_object for table_object in main_diagonal_2 if table_object.is_set]))
+
+        main_diagonal_3 = self.table.get_main_diagonal(1, 1)
+
+
+        self.assertEquals(1, len([table_object for table_object in main_diagonal_3 if table_object.is_set]))
