@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf6c1ae3-01c3-4437-bbcc-2ca20e74ec7f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Python/Backtracking/EightQueens.py" afterPath="$PROJECT_DIR$/Python/Backtracking/EightQueens.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Python/Backtracking/EightQueens2.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Algorithms.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -16,6 +17,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Algorithms$EightQueens2.coverage" NAME="EightQueens2 Coverage Results" MODIFIED="1462142726822" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python/Backtracking" />
     <SUITE FILE_PATH="coverage/Algorithms$Unittest_TestTable_test_get_column.coverage" NAME="Unittest TestTable.test_get_column Coverage Results" MODIFIED="1462116304682" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python/Backtracking" />
     <SUITE FILE_PATH="coverage/Algorithms$Unittests_in_TestTable.coverage" NAME="Unittests in TestTable Coverage Results" MODIFIED="1462134059491" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python/Backtracking" />
     <SUITE FILE_PATH="coverage/Algorithms$EightQueens.coverage" NAME="EightQueens Coverage Results" MODIFIED="1462134620084" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python/Backtracking" />
@@ -33,11 +35,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="EightQueens.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EightQueens.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Python/Backtracking/EightQueens.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="194" column="19" selection-start-line="194" selection-start-column="19" selection-end-line="194" selection-end-column="19" />
+            <state relative-caret-position="210">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding>
+                <element signature="e#53#92#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EightQueens2.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Python/Backtracking/EightQueens2.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="580">
+              <caret line="59" column="34" selection-start-line="59" selection-start-column="34" selection-end-line="59" selection-end-column="34" />
               <folding>
                 <element signature="e#53#92#0" expanded="true" />
               </folding>
@@ -79,6 +93,7 @@
       <list>
         <option value="$PROJECT_DIR$/Python/Test/Test0.py" />
         <option value="$PROJECT_DIR$/Python/Backtracking/EightQueens.py" />
+        <option value="$PROJECT_DIR$/Python/Backtracking/EightQueens2.py" />
       </list>
     </option>
   </component>
@@ -196,30 +211,7 @@
     <property name="FullScreen" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Python.EightQueens">
-    <configuration default="false" name="Unittest TestTable.test_get_main_diagonal" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Python/Backtracking" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Algorithms" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python/Backtracking/EightQueens.py" />
-      <option name="CLASS_NAME" value="TestTable" />
-      <option name="METHOD_NAME" value="test_get_main_diagonal" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_METHOD" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.EightQueens2">
     <configuration default="false" name="Unittests in TestTable" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -303,6 +295,24 @@
       <module name="Algorithms" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python/Backtracking/EightQueens.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="EightQueens2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Python/Backtracking" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Algorithms" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python/Backtracking/EightQueens2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -532,19 +542,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python tests.Unittest TestTable.test_get_main_diagonal" />
-      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in TestTable" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest TestTable.test_get_second_diagonal" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest TestTable.test_is_correct" />
-      <item index="4" class="java.lang.String" itemvalue="Python.EightQueens" />
+      <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in TestTable" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest TestTable.test_get_second_diagonal" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest TestTable.test_is_correct" />
+      <item index="3" class="java.lang.String" itemvalue="Python.EightQueens" />
+      <item index="4" class="java.lang.String" itemvalue="Python.EightQueens2" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.EightQueens" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in TestTable" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest TestTable.test_is_correct" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest TestTable.test_get_second_diagonal" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest TestTable.test_get_main_diagonal" />
+        <item index="0" class="java.lang.String" itemvalue="Python.EightQueens2" />
+        <item index="1" class="java.lang.String" itemvalue="Python.EightQueens" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in TestTable" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest TestTable.test_is_correct" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest TestTable.test_get_second_diagonal" />
       </list>
     </recent_temporary>
   </component>
@@ -653,8 +663,68 @@
           <line>158</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/Python/Backtracking/EightQueens2.py</url>
+          <line>59</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/Python/Backtracking/EightQueens2.py</url>
+          <line>60</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/Python/Backtracking/EightQueens2.py</url>
+          <line>25</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/Python/Backtracking/EightQueens2.py</url>
+          <line>33</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/Python/Backtracking/EightQueens2.py</url>
+          <line>35</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/Python/Backtracking/EightQueens2.py</url>
+          <line>40</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/Python/Backtracking/EightQueens2.py</url>
+          <line>42</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/Python/Backtracking/EightQueens2.py</url>
+          <line>44</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/Python/Backtracking/EightQueens2.py</url>
+          <line>26</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/Python/Backtracking/EightQueens2.py</url>
+          <line>38</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/Python/Backtracking/EightQueens2.py</url>
+          <line>48</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/Python/Backtracking/EightQueens2.py</url>
+          <line>22</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="6" />
+      <option name="time" value="18" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -686,8 +756,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Python/Backtracking/EightQueens.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="194" column="19" selection-start-line="194" selection-start-column="19" selection-end-line="194" selection-end-column="19" />
+        <state relative-caret-position="210">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <element signature="e#53#92#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python/Backtracking/EightQueens2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="59" column="34" selection-start-line="59" selection-start-column="34" selection-end-line="59" selection-end-column="34" />
           <folding>
             <element signature="e#53#92#0" expanded="true" />
           </folding>
