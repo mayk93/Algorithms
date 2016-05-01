@@ -236,7 +236,6 @@ class TestTable(unittest.TestCase):
         self.table.reset()
 
     def test_get_second_diagonal(self):
-
         '''
         [ <0, 0> [0, 1] [0, 2] <0, 3> ]
         [ [1, 0] [1, 1] <1, 2> [1, 3] ]
@@ -269,4 +268,33 @@ class TestTable(unittest.TestCase):
         self.table.reset()
 
     def test_is_correct(self):
-        pass
+        '''
+        [ <0, 0> [0, 1] [0, 2] [0, 3] ]
+        [ [1, 0] [1, 1] [1, 2] <1, 3> ]
+        [ [2, 0] <2, 1> [2, 2] [2, 3] ]
+        [ [3, 0] [3, 1] [3, 2] [3, 3] ]
+
+        :return:
+        '''
+
+        self.table.set(0, 0)
+        self.table.set(2, 1)
+        self.table.set(1, 3)
+
+        self.assertTrue(self.table.is_correct())
+
+        self.table.reset()
+
+        '''
+        [ <0, 0> <0, 1> [0, 2] [0, 3] ]
+        [ [1, 0] [1, 1] [1, 2] [1, 3] ]
+        [ [2, 0] [2, 1] [2, 2] [2, 3] ]
+        [ [3, 0] [3, 1] [3, 2] [3, 3] ]
+
+        :return:
+        '''
+
+        self.table.set(0, 0)
+        self.table.set(0, 1)
+
+        self.assertFalse(self.table.is_correct())

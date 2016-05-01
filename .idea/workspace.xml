@@ -17,11 +17,12 @@
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Algorithms$Unittest_TestTable_test_get_column.coverage" NAME="Unittest TestTable.test_get_column Coverage Results" MODIFIED="1462116304682" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python/Backtracking" />
-    <SUITE FILE_PATH="coverage/Algorithms$Unittests_in_TestTable.coverage" NAME="Unittests in TestTable Coverage Results" MODIFIED="1462117082536" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python/Backtracking" />
+    <SUITE FILE_PATH="coverage/Algorithms$Unittests_in_TestTable.coverage" NAME="Unittests in TestTable Coverage Results" MODIFIED="1462132781306" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python/Backtracking" />
     <SUITE FILE_PATH="coverage/Algorithms$EightQueens.coverage" NAME="EightQueens Coverage Results" MODIFIED="1462114775595" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python/Backtracking" />
     <SUITE FILE_PATH="coverage/Algorithms$Test0.coverage" NAME="Test0 Coverage Results" MODIFIED="1462061669621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python/Test" />
     <SUITE FILE_PATH="coverage/Algorithms$Unittest_TestTable_test_get_main_diagonal.coverage" NAME="Unittest TestTable.test_get_main_diagonal Coverage Results" MODIFIED="1462117076564" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python/Backtracking" />
     <SUITE FILE_PATH="coverage/Algorithms$Unittest_TestTable_test_get_second_diagonal.coverage" NAME="Unittest TestTable.test_get_second_diagonal Coverage Results" MODIFIED="1462132226933" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python/Backtracking" />
+    <SUITE FILE_PATH="coverage/Algorithms$Unittest_TestTable_test_is_correct.coverage" NAME="Unittest TestTable.test_is_correct Coverage Results" MODIFIED="1462132622565" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python/Backtracking" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -35,8 +36,8 @@
       <file leaf-file-name="EightQueens.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Python/Backtracking/EightQueens.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="655">
-              <caret line="271" column="12" selection-start-line="271" selection-start-column="12" selection-end-line="271" selection-end-column="12" />
+            <state relative-caret-position="220">
+              <caret line="185" column="11" selection-start-line="185" selection-start-column="11" selection-end-line="185" selection-end-column="11" />
               <folding>
                 <element signature="e#53#92#0" expanded="true" />
               </folding>
@@ -195,25 +196,7 @@
     <property name="FullScreen" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Python tests.Unittest TestTable.test_get_second_diagonal">
-    <configuration default="false" name="EightQueens" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Python/Backtracking" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Algorithms" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python/Backtracking/EightQueens.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python tests.Unittests in TestTable">
     <configuration default="false" name="Unittest TestTable.test_get_column" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -297,6 +280,29 @@
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python/Backtracking/EightQueens.py" />
       <option name="CLASS_NAME" value="TestTable" />
       <option name="METHOD_NAME" value="test_get_second_diagonal" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittest TestTable.test_is_correct" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Python/Backtracking" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Algorithms" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python/Backtracking/EightQueens.py" />
+      <option name="CLASS_NAME" value="TestTable" />
+      <option name="METHOD_NAME" value="test_is_correct" />
       <option name="FOLDER_NAME" value="" />
       <option name="TEST_TYPE" value="TEST_METHOD" />
       <option name="PATTERN" value="" />
@@ -531,19 +537,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.EightQueens" />
-      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest TestTable.test_get_column" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest TestTable.test_get_main_diagonal" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in TestTable" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest TestTable.test_get_second_diagonal" />
+      <item index="0" class="java.lang.String" itemvalue="Python tests.Unittest TestTable.test_get_column" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest TestTable.test_get_main_diagonal" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in TestTable" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest TestTable.test_get_second_diagonal" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest TestTable.test_is_correct" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittest TestTable.test_get_second_diagonal" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in TestTable" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest TestTable.test_get_main_diagonal" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest TestTable.test_get_column" />
-        <item index="4" class="java.lang.String" itemvalue="Python.EightQueens" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in TestTable" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest TestTable.test_is_correct" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest TestTable.test_get_second_diagonal" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest TestTable.test_get_main_diagonal" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest TestTable.test_get_column" />
       </list>
     </recent_temporary>
   </component>
@@ -570,7 +576,22 @@
     <history-entry file="Unittest_TestTable_test_get_second_diagonal - 2016.05.01 at 20h 50m 27s.xml">
       <configuration name="Unittest TestTable.test_get_second_diagonal" configurationId="tests" />
     </history-entry>
+    <history-entry file="Unittest_TestTable_test_is_correct - 2016.05.01 at 20h 58m 54s.xml">
+      <configuration name="Unittest TestTable.test_is_correct" configurationId="tests" />
+    </history-entry>
     <history-entry file="Unittests_in_TestTable - 2016.05.01 at 16h 38m 02s.xml">
+      <configuration name="Unittests in TestTable" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_TestTable - 2016.05.01 at 20h 56m 27s.xml">
+      <configuration name="Unittests in TestTable" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_TestTable - 2016.05.01 at 20h 59m 19s.xml">
+      <configuration name="Unittests in TestTable" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_TestTable - 2016.05.01 at 20h 59m 36s.xml">
+      <configuration name="Unittests in TestTable" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_TestTable - 2016.05.01 at 20h 59m 41s.xml">
       <configuration name="Unittests in TestTable" configurationId="tests" />
     </history-entry>
   </component>
@@ -584,12 +605,12 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32957503" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32957503" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39982653" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -603,7 +624,40 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/Python/Backtracking/EightQueens.py</url>
+          <line>283</line>
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/Python/Backtracking/EightQueens.py</url>
+          <line>165</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/Python/Backtracking/EightQueens.py</url>
+          <line>136</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/Python/Backtracking/EightQueens.py</url>
+          <line>143</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/Python/Backtracking/EightQueens.py</url>
+          <line>150</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/Python/Backtracking/EightQueens.py</url>
+          <line>157</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="6" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -634,8 +688,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Python/Backtracking/EightQueens.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="655">
-          <caret line="271" column="12" selection-start-line="271" selection-start-column="12" selection-end-line="271" selection-end-column="12" />
+        <state relative-caret-position="220">
+          <caret line="185" column="11" selection-start-line="185" selection-start-column="11" selection-end-line="185" selection-end-column="11" />
           <folding>
             <element signature="e#53#92#0" expanded="true" />
           </folding>
