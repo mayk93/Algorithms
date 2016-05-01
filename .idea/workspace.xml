@@ -21,6 +21,7 @@
     <SUITE FILE_PATH="coverage/Algorithms$EightQueens.coverage" NAME="EightQueens Coverage Results" MODIFIED="1462114775595" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python/Backtracking" />
     <SUITE FILE_PATH="coverage/Algorithms$Test0.coverage" NAME="Test0 Coverage Results" MODIFIED="1462061669621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python/Test" />
     <SUITE FILE_PATH="coverage/Algorithms$Unittest_TestTable_test_get_main_diagonal.coverage" NAME="Unittest TestTable.test_get_main_diagonal Coverage Results" MODIFIED="1462117076564" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python/Backtracking" />
+    <SUITE FILE_PATH="coverage/Algorithms$Unittest_TestTable_test_get_second_diagonal.coverage" NAME="Unittest TestTable.test_get_second_diagonal Coverage Results" MODIFIED="1462132226933" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python/Backtracking" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -34,8 +35,8 @@
       <file leaf-file-name="EightQueens.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Python/Backtracking/EightQueens.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="209" column="39" selection-start-line="209" selection-start-column="39" selection-end-line="209" selection-end-column="39" />
+            <state relative-caret-position="-500">
+              <caret line="193" column="21" selection-start-line="193" selection-start-column="21" selection-end-line="193" selection-end-column="21" />
               <folding>
                 <element signature="e#53#92#0" expanded="true" />
               </folding>
@@ -194,7 +195,7 @@
     <property name="FullScreen" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in TestTable">
+  <component name="RunManager" selected="Python tests.Unittest TestTable.test_get_second_diagonal">
     <configuration default="false" name="EightQueens" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -209,24 +210,6 @@
       <module name="Algorithms" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python/Backtracking/EightQueens.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Test0" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Python/Test" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Algorithms" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python/Test/Test0.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -293,6 +276,29 @@
       <option name="METHOD_NAME" value="" />
       <option name="FOLDER_NAME" value="" />
       <option name="TEST_TYPE" value="TEST_CLASS" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittest TestTable.test_get_second_diagonal" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Python/Backtracking" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Algorithms" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python/Backtracking/EightQueens.py" />
+      <option name="CLASS_NAME" value="TestTable" />
+      <option name="METHOD_NAME" value="test_get_second_diagonal" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
       <option name="PUREUNITTEST" value="true" />
@@ -526,18 +532,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.EightQueens" />
-      <item index="1" class="java.lang.String" itemvalue="Python.Test0" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest TestTable.test_get_column" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest TestTable.test_get_main_diagonal" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in TestTable" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest TestTable.test_get_column" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest TestTable.test_get_main_diagonal" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in TestTable" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest TestTable.test_get_second_diagonal" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in TestTable" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest TestTable.test_get_main_diagonal" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest TestTable.test_get_column" />
-        <item index="3" class="java.lang.String" itemvalue="Python.EightQueens" />
-        <item index="4" class="java.lang.String" itemvalue="Python.Test0" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittest TestTable.test_get_second_diagonal" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in TestTable" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest TestTable.test_get_main_diagonal" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest TestTable.test_get_column" />
+        <item index="4" class="java.lang.String" itemvalue="Python.EightQueens" />
       </list>
     </recent_temporary>
   </component>
@@ -560,6 +566,9 @@
     </history-entry>
     <history-entry file="Unittest_TestTable_test_get_main_diagonal - 2016.05.01 at 16h 37m 56s.xml">
       <configuration name="Unittest TestTable.test_get_main_diagonal" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittest_TestTable_test_get_second_diagonal - 2016.05.01 at 20h 50m 27s.xml">
+      <configuration name="Unittest TestTable.test_get_second_diagonal" configurationId="tests" />
     </history-entry>
     <history-entry file="Unittests_in_TestTable - 2016.05.01 at 16h 38m 02s.xml">
       <configuration name="Unittests in TestTable" configurationId="tests" />
@@ -625,8 +634,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Python/Backtracking/EightQueens.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="209" column="39" selection-start-line="209" selection-start-column="39" selection-end-line="209" selection-end-column="39" />
+        <state relative-caret-position="-500">
+          <caret line="193" column="21" selection-start-line="193" selection-start-column="21" selection-end-line="193" selection-end-column="21" />
           <folding>
             <element signature="e#53#92#0" expanded="true" />
           </folding>

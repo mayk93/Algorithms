@@ -233,3 +233,38 @@ class TestTable(unittest.TestCase):
 
 
         self.assertEquals(1, len([table_object for table_object in main_diagonal_3 if table_object.is_set]))
+
+    def test_get_second_diagonal(self):
+
+        '''
+        [ <0, 0> [0, 1] [0, 2] <0, 3> ]
+        [ [1, 0] [1, 1] <1, 2> [1, 3] ]
+        [ [2, 0] <2, 1> [2, 2] [2, 3] ]
+        [ <3, 0> [3, 1] [3, 2] [3, 3] ]
+
+        Set (0, 0) and (0, 1), (1, 2), (2, 3)
+
+        Main diagonal of (0, 1), (1, 2), (2, 3) should be the same and should not include (0, 0)
+
+        :return:
+        '''
+
+        self.table.set(0, 0)
+        self.table.set(0, 3)
+        self.table.set(1, 2)
+        self.table.set(2, 1)
+        self.table.set(3, 0)
+
+        second_diagonal_0 = self.table.get_second_diagonal(0, 3)
+        second_diagonal_1 = self.table.get_second_diagonal(1, 2)
+        second_diagonal_2 = self.table.get_second_diagonal(2, 1)
+        second_diagonal_3 = self.table.get_second_diagonal(3, 0)
+
+        self.assertEquals(4, len([table_object for table_object in second_diagonal_0 if table_object.is_set]))
+        self.assertEquals(4, len([table_object for table_object in second_diagonal_1 if table_object.is_set]))
+        self.assertEquals(4, len([table_object for table_object in second_diagonal_2 if table_object.is_set]))
+        self.assertEquals(4, len([table_object for table_object in second_diagonal_3 if table_object.is_set]))
+
+        second_diagonal_4 = self.table.get_second_diagonal(0, 0)
+
+        self.assertEquals(1, len([table_object for table_object in second_diagonal_4 if table_object.is_set]))
