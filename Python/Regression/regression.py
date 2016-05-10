@@ -7,11 +7,14 @@ logging.basicConfig(level=logging.INFO)
 # -----
 
 # Libs
-import pandas as pd
 import quandl
 import math
-import numpy as np
 import sys
+import numpy as np
+import pandas as pd
+from datetime import datetime
+import matplotlib.pyplot as plt
+from matplotlib import style
 from sklearn import preprocessing, cross_validation, svm
 from sklearn.linear_model import LinearRegression
 # -----
@@ -19,6 +22,8 @@ from sklearn.linear_model import LinearRegression
 
 FORECAST = "Adj. Close"
 OUTLIER_VALUE = -sys.maxsize
+UNIX_DAY = 86400
+style.use('ggplot')
 
 
 def get_data_frame():
@@ -48,7 +53,6 @@ def set_label(data_frame=None, forecast_out=0):
     # The forecast column ( Adj. Close, the price at closing ) will be shifted up ( hence the minus ).
     # This was, for each row, the label column will be adj. close 10 days in the future.
     data_frame['Label'] = data_frame[FORECAST].shift(-forecast_out)
-    data_frame.dropna(inplace=True)
     return data_frame
 
 
@@ -65,10 +69,12 @@ def preprocess(features=None, labels=None, data_frame=None, forecast_out=0):
 
     # Scale ( Normalize, in a way. Set it between -1 and 1 )
     features = preprocessing.scale(features)
-
+    features_no_label = features[-forecast_out:]
+    features = features[:-forecast_out:]
+    data_frame.dropna(inplace=True)
     labels = np.array(data_frame['Label'])
 
-    return features, labels
+    return features, labels, features_no_label
 
 
 def get_data():
@@ -85,15 +91,14 @@ def get_data():
     logging.info("[get_data] Data frame at this point:\n\n" + str(used_stock_data_frame.head()) + "\n\n")
 
     # Define the Features and Labels.
-    features = np.array(
-        used_stock_data_frame.drop(['Label'], 1))  # Our features are everything except the label column.
+    features = np.array(used_stock_data_frame.drop(['Label'], 1))  # Our features are everything except the label
     labels = np.array(used_stock_data_frame['Label'])  # Our labels are the label column.
 
     # Preprocess features and labels
-    features, labels = preprocess(features=features,
-                                  labels=labels,
-                                  data_frame=used_stock_data_frame,
-                                  forecast_out=forecast_out)
+    features, labels, features_no_label = preprocess(features=features,
+                                                     labels=labels,
+                                                     data_frame=used_stock_data_frame,
+                                                     forecast_out=forecast_out)
 
     logging.info("[get_data] Features:\n\n" + str(features) + "\n\n")
     logging.info("[get_data] Labels:\n\n" + str(labels) + "\n\n")
@@ -106,13 +111,13 @@ def get_data():
                                                                                                  labels,
                                                                                                  test_size=0.3)
 
-    return features_train, features_test, labels_train, labels_test
+    return features_train, features_test, labels_train, labels_test, features_no_label, used_stock_data_frame
 
 
 def train(features_train=None, features_test=None, labels_train=None, labels_test=None):
     if None in [features_train, features_test, labels_train, labels_test]:
         logging.error("[train] IMPORTANT: Using None as training or test data. Training failed.")
-        return
+        return None
     classifier = LinearRegression()
     classifier.fit(features_train, labels_train)  # Fit means train
     accuracy = classifier.score(features_test, labels_test)  # Score means test
@@ -122,14 +127,43 @@ def train(features_train=None, features_test=None, labels_train=None, labels_tes
     return classifier
 
 
+def plot(data_frame=None, forecast=None):
+    if data_frame is None:
+        logging.error("[plot] IMPORTANT: Using None as data frame. Plot failed.")
+        return
+    if forecast is None:
+        logging.error("[plot] IMPORTANT: Using None as forecast. Plot failed.")
+        return
+    data_frame["Forecast"] = np.nan
+    last_date = data_frame.iloc[-1].name
+    last_unix = last_date.timestamp()
+    next_unix = last_unix + UNIX_DAY
+    for forecast_value in forecast:
+        next_date = datetime.fromtimestamp(next_unix)
+        next_unix += UNIX_DAY
+        data_frame.loc[next_date] = [np.nan for _ in range(len(data_frame.columns)-1)] + [forecast_value]
+    data_frame['Adj. Close'].plot()
+    data_frame['Forecast'].plot()
+    plt.legend(loc=4)
+    plt.xlabel('Date')
+    plt.ylabel('Price')
+    plt.show()
+
 def main():
     logging.info("Start.")
 
     # Get data.
-    features_train, features_test, labels_train, labels_test = get_data()
+    features_train, features_test, labels_train, labels_test, features_no_label, data_frame = get_data()
 
     # Train a classifier using data.
     trained_classifier = train(features_train, features_test, labels_train, labels_test)
+
+    # Predict.
+    forecast_set = trained_classifier.predict(features_no_label)
+
+    # Plot
+    plot(data_frame=data_frame, forecast=forecast_set)
+
 
 if __name__ == "__main__":
     main()
