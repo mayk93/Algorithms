@@ -70,23 +70,23 @@ def preprocess(features=None, labels=None, data_frame=None, forecast_out=0):
 
     return features, labels
 
-def main():
-    logging.info("Start.")
 
+def get_data():
     # Get a slightly processed data frame from Quandl.
     used_stock_data_frame = get_data_frame()
-    logging.info("[main] Got a data frame that looks like this:\n\n" + str(used_stock_data_frame.head()) + "\n\n")
+    logging.info("[get_data] Got a data frame that looks like this:\n\n" + str(used_stock_data_frame.head()) + "\n\n")
 
     # Get prediction offset.
     forecast_out = get_forecast_out(days=100, data_frame=used_stock_data_frame)
-    logging.info("[main] Forecast out: " + str(forecast_out))
+    logging.info("[get_data] Forecast out: " + str(forecast_out))
 
     # Set the label column.
     used_stock_data_frame = set_label(data_frame=used_stock_data_frame, forecast_out=forecast_out)
-    logging.info("[main] Data frame at this point:\n\n" + str(used_stock_data_frame.head()) + "\n\n")
+    logging.info("[get_data] Data frame at this point:\n\n" + str(used_stock_data_frame.head()) + "\n\n")
 
     # Define the Features and Labels.
-    features = np.array(used_stock_data_frame.drop(['Label'], 1))  # Our features are everything except the label column.
+    features = np.array(
+        used_stock_data_frame.drop(['Label'], 1))  # Our features are everything except the label column.
     labels = np.array(used_stock_data_frame['Label'])  # Our labels are the label column.
 
     # Preprocess features and labels
@@ -95,13 +95,41 @@ def main():
                                   data_frame=used_stock_data_frame,
                                   forecast_out=forecast_out)
 
-    logging.info("[main] Features:\n\n" + str(features) + "\n\n")
-    logging.info("[main] Labels:\n\n" + str(labels) + "\n\n")
+    logging.info("[get_data] Features:\n\n" + str(features) + "\n\n")
+    logging.info("[get_data] Labels:\n\n" + str(labels) + "\n\n")
 
-    logging.info("[main] Len of Features:\n\n" + str(len(features)) + "\n\n")
-    logging.info("[main] Len Labels:\n\n" + str(len(labels)) + "\n\n")
+    logging.info("[get_data] Len of Features:\n" + str(len(features)) + "\n")
+    logging.info("[get_data] Len Labels:\n" + str(len(labels)) + "\n")
 
-    # 
+    # Get training and testing data.
+    features_train, features_test, labels_train, labels_test = cross_validation.train_test_split(features,
+                                                                                                 labels,
+                                                                                                 test_size=0.3)
+
+    return features_train, features_test, labels_train, labels_test
+
+
+def train(features_train=None, features_test=None, labels_train=None, labels_test=None):
+    if None in [features_train, features_test, labels_train, labels_test]:
+        logging.error("[train] IMPORTANT: Using None as training or test data. Training failed.")
+        return
+    classifier = LinearRegression()
+    classifier.fit(features_train, labels_train)  # Fit means train
+    accuracy = classifier.score(features_test, labels_test)  # Score means test
+
+    logging.info("Accuracy score: " + str(accuracy))
+
+    return classifier
+
+
+def main():
+    logging.info("Start.")
+
+    # Get data.
+    features_train, features_test, labels_train, labels_test = get_data()
+
+    # Train a classifier using data.
+    trained_classifier = train(features_train, features_test, labels_train, labels_test)
 
 if __name__ == "__main__":
     main()
